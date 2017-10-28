@@ -1,6 +1,6 @@
 require 'faraday_middleware'
 
-module FormulaeRuby
+module ExchequerClient
   class BaseClient
     def initialize(options = {})
       @api_key = options[:api_key]
