@@ -22,7 +22,7 @@ module ExchequerClient
     end
 
     private def connection
-      Faraday.new(url: Config.base_url, headers: headers) do |builder|
+      Faraday.new(url: ExchequerClient::Config.base_api_url, headers: headers) do |builder|
         builder.request  :json
         builder.adapter  :net_http
       end
