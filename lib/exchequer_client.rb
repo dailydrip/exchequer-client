@@ -7,6 +7,7 @@ require "exchequer_client/URL"
 
 # Iframes
 require "exchequer_client/iframes/visitor_iframe"
+require "exchequer_client/iframes/add_payment_method"
 
 # Clients
 require "exchequer_client/clients/base_client"
