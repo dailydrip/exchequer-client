@@ -5,6 +5,10 @@ module ExchequerClient
         "#{ExchequerClient::Config.base_url}/"
       end
 
+      def add_payment_method
+        "#{ExchequerClient::Config.base_url}/payments/add_payment_method"
+      end
+
       def another_path
         "#{ExchequerClient::Config.base_url}/another_path"
       end
