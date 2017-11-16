@@ -16,7 +16,7 @@ module ExchequerClient
 
     private def headers
       {
-        Authorization: "Bearer #{@api_key}",
+        Authentication: @api_key.to_s,
         'Content-Type' => 'application/json'
       }
     end
