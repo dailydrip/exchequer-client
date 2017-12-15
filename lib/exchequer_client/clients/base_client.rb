@@ -2,16 +2,20 @@ require 'faraday_middleware'
 
 module ExchequerClient
   class BaseClient
+    APIError = Class.new(StandardError)
+
     def initialize(options = {})
       @api_key = options[:api_key]
     end
 
     def post(path, _headers = {})
-      connection.post(path)
+      response = connection.post(path)
+      raise APIError, response.body unless response.success?
     end
 
     def get(path, _headers = {})
-      connection.get(path)
+      response = connection.get(path)
+      raise APIError, response.body unless response.success?
     end
 
     private def headers
