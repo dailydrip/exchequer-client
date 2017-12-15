@@ -11,11 +11,13 @@ module ExchequerClient
     def post(path, _headers = {})
       response = connection.post(path)
       raise APIError, response.body unless response.success?
+      response
     end
 
     def get(path, _headers = {})
       response = connection.get(path)
       raise APIError, response.body unless response.success?
+      response
     end
 
     private def headers
