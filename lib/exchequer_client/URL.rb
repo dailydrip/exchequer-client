@@ -9,8 +9,8 @@ module ExchequerClient
         "#{ExchequerClient::Config.base_url}/payments/add_payment_method"
       end
 
-      def checkout(offer_id)
-        "#{ExchequerClient::Config.base_url}/checkouts/new?offer_id=#{offer_id}"
+      def offers_show(offer_id)
+        "#{ExchequerClient::Config.base_url}/offers/#{offer_id}"
       end
 
       def another_path
