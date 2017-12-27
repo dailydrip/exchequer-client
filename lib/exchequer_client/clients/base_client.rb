@@ -6,6 +6,7 @@ module ExchequerClient
 
     def initialize(options = {})
       @api_key = options[:api_key]
+      @public_token = options[:public_token]
     end
 
     def post(path, _headers = {})

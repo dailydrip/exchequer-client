@@ -6,7 +6,7 @@ module ExchequerClient
 
     def all
       [].tap do |f|
-        response = get('offers/')
+        response = get("offers/?public_token=#{@public_token}")
         response_offers = JSONConverter.to_hash(response.body)
         response_offers.each do |offer|
           f << Offer.new(offer)
