@@ -23,15 +23,15 @@ module ExchequerClient
 
     private def headers
       {
-        Authentication: @api_key.to_s,
+        Authentication: "Bearer: #{@api_key.to_s}",
         'Content-Type' => 'application/json'
       }
     end
 
     private def connection
       Faraday.new(url: ExchequerClient::Config.base_api_url, headers: headers) do |builder|
-        builder.request  :json
-        builder.adapter  :net_http
+        builder.request :json
+        builder.adapter :net_http
       end
     end
   end
