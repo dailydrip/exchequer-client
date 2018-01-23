@@ -3,10 +3,10 @@ module ExchequerClient
     attr_accessor :id, :manager_id, :name, :description, :due_on, :amount, :deferrable
 
     def initialize(json)
-      decode_offer(json)
+      deserialize(json)
     end
 
-    private def decode_offer(json)
+    private def deserialize(json)
       self.id = json['id']
       self.manager_id = json['manager']['id']
       self.name = json['name']
