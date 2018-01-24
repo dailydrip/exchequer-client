@@ -8,7 +8,7 @@ module ExchequerClient
       response = get("offers/?public_token=#{@public_token}")
       response_offers = JSONConverter.to_hash(response.body)
       response_offers.map do |offer|
-        f << Offer.new(offer)
+        Offer.new(offer)
       end
     end
   end
