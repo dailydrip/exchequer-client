@@ -5,8 +5,8 @@ module ExchequerClient
         "#{ExchequerClient::Config.base_url}/"
       end
 
-      def offers_show(offer_id, public_token: nil)
-        "#{ExchequerClient::Config.base_url}/offers/#{offer_id}?public_token=#{public_token}"
+      def offers_show(offer_id, manager_public_token: nil)
+        "#{ExchequerClient::Config.base_url}/offers/#{offer_id}?public_token=#{manager_public_token}"
       end
     end
   end
