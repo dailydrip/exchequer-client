@@ -8,7 +8,8 @@ Ruby gem for [Exchequer-server](https://github.com/dailydrip/exchequer-server).
 You need to set up your API URL.
 
 ```sh
-export BASE_API_URL="http://localhost:3000"
+export EXCHEQUER_BASE_URL="http://localhost:3000"
+export EXCHEQUER_BASE_API_URL="http://localhost:3000"
 export EXCHEQUER_API_KEY="API KEY"
 export EXCHEQUER_MANAGER_PUBLIC_TOKEN="MANAGER PUBLIC TOKEN"
 ```
