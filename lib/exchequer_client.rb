@@ -7,8 +7,6 @@ require 'exchequer_client/URL'
 require 'exchequer_client/json_converter'
 
 # Iframes
-require 'exchequer_client/iframes/visitor_iframe'
-require 'exchequer_client/iframes/add_payment_method'
 require 'exchequer_client/iframes/offers'
 
 # Clients
